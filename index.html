@@ -76,6 +76,36 @@
           <p>Don't have an accout? <a href="#">Sign up</a></p>
         </form>
       </section>
+
+      <section class="sign--up">
+        <h2 class="login--header">
+          <i class="fa-solid fa-arrow-left"></i> Sign Up
+        </h2>
+        <p class="login--paragraph">
+          Sign up with one of the following options
+        </p>
+        <article class="login--options">
+          <button class="sign--up--btn btn--apple">
+            <i class="fa-brands fa-apple"></i>
+          </button>
+          <button class="sign--up--btn btn--google">
+            <i class="fa-brands fa-google"></i>
+          </button>
+        </article>
+
+        <form action="/submit" method="post" class="login--form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+
+          <button type="submit">Sign up</button>
+        </form>
+      </section>
     </main>
     <footer></footer>
   </body>
