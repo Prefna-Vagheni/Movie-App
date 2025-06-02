@@ -66,10 +66,22 @@
         </article>
         <form action="/submit" method="post" class="login--form">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            required
+          />
 
           <label for="password">Password</label>
-          <input type="password" id="password" name="password" required />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Strong password"
+            required
+          />
 
           <button type="submit">Sign in</button>
 
@@ -95,16 +107,81 @@
 
         <form action="/submit" method="post" class="login--form">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            required
+          />
 
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Emai"
+            required
+          />
 
           <label for="password">Password</label>
-          <input type="password" id="password" name="password" required />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Strong password"
+            required
+          />
 
           <button type="submit">Sign up</button>
         </form>
+      </section>
+
+      <section class="movies--list">
+        <article>
+          <h2 class="movies--header">hello, <span class="username"></span></h2>
+          <i class="fa-solid fa-bars-staggered"></i>
+        </article>
+        <input type="text" class="search--movie" placeholder="Search" />
+
+        <article>
+          <h3 class="movies--continue">Continue to watch</h3>
+          <p class="view--all">View all</p>
+        </article>
+
+        <article class="currently--watching">
+          <article class="movie--card">
+            <figure class="movie--img">
+              <img src="" alt="" />
+            </figure>
+            <p class="movie--progress"></p>
+            <h4 class="movie--title">The big bang theory</h4>
+            <p class="movie--track">Season One - Episode 01</p>
+          </article>
+        </article>
+
+        <article class="trending">
+          <article>
+            <h3 class="trending--header">Trending Now</h3>
+            <p class="trending--view view--all">View all</p>
+          </article>
+          <article class="trending--movie">
+            <article class="trending--card">
+              <figure class="trending--img">
+                <img src="" alt="" />
+                <figcaption>
+                  This is where the description of a movie will appear
+                </figcaption>
+              </figure>
+              <h4 class="trending--title">The big bang theory</h4>
+              <p class="trending--description">
+                <span class="prod--year">2020</span>&nbsp;
+                <span class="type">Drama</span> &nbsp;
+                <span class="movie--duration">1h 30m</span>
+              </p>
+            </article>
+          </article>
+        </article>
       </section>
     </main>
     <footer></footer>
