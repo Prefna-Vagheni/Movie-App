@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <!-- Add favicon -->
     <link
       rel="icon"
       href="images/cloud.png"
@@ -11,8 +11,47 @@
       width="32"
       height="32"
     />
+    <!-- End favicon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <title>Movie App</title>
-    <style></style>
+    <style role="stylesheet" href="css/style.css"></style>
+    <script defer src="js/script.js"></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><span class="hour"></span>:<span class="main"></span></li>
+          <ul>
+            <li><i class="fa-solid fa-signal"></i></li>
+            <li><i class="fa-solid fa-wifi"></i></li>
+            <li><i class="fa-solid fa-battery-full"></i></li>
+          </ul>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="landing--page">
+        <figure>
+          <img src="" alt="" />
+          <figcaption class="longin--caption">
+            An image worthy to be on the landing page.
+          </figcaption>
+        </figure>
+        <h1 class="landing--header">
+          Hello <span class="landing--bold">Beautiful,</span>
+        </h1>
+        <p class="landing--paragraph">
+          Now we should be careful about covid-19, so it's the best time to
+          watch movies and series
+        </p>
+        <button class="btn btn--sing__in">Sign In</button>
+        <button class="btn btn--create__acount">Create Account</button>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
 </html>
