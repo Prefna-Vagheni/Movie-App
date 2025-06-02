@@ -51,6 +51,31 @@
         <button class="btn btn--sing__in">Sign In</button>
         <button class="btn btn--create__acount">Create Account</button>
       </section>
+      <section class="login">
+        <h2 class="login--header">
+          <i class="fa-solid fa-arrow-left"></i> Sign In
+        </h2>
+        <p class="login--paragraph">Log in with one of the following options</p>
+        <article class="login--options">
+          <button class="login--btn btn--apple">
+            <i class="fa-brands fa-apple"></i>
+          </button>
+          <button class="login--btn btn--google">
+            <i class="fa-brands fa-google"></i>
+          </button>
+        </article>
+        <form action="/submit" method="post" class="login--form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+
+          <button type="submit">Sign in</button>
+
+          <p>Don't have an accout? <a href="#">Sign up</a></p>
+        </form>
+      </section>
     </main>
     <footer></footer>
   </body>
