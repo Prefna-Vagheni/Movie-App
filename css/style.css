@@ -16,3 +16,27 @@ body {
   background-color: #555;
   color: whitesmoke;
 }
+body {
+  max-width: 350px;
+  margin: 0 auto;
+  background-image: url('../images/bg-img.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat-y;
+  position: relative;
+}
+main {
+  padding-bottom: 3rem;
+}
+header {
+  padding-bottom: 3rem;
+}
+footer {
+  height: 3rem;
+  background-color: rgba(96, 95, 95, 0.941);
+  border-top: 0.5px solid gray;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 9999;
+}
