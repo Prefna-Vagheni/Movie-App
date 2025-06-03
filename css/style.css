@@ -40,3 +40,19 @@ footer {
   width: 100%;
   z-index: 9999;
 }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+li {
+  list-style-type: none;
+}
+a {
+  color: inherit;
+  cursor: pointer;
+}
+i {
+  color: whitesmoke;
+}
