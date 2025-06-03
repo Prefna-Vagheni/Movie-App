@@ -75,6 +75,12 @@ nav {
 .justify-between {
   justify-content: space-between;
 }
+.justify-around {
+  justify-content: space-around;
+}
+.justidy-evenly {
+  justify-content: space-evenly;
+}
 .grid {
   display: grid;
 }
