@@ -27,7 +27,6 @@ body {
 }
 main {
   padding-bottom: 3rem;
-  background-color: red;
 }
 header {
   padding-bottom: 3rem;
@@ -35,6 +34,7 @@ header {
 footer {
   height: 3rem;
   background-color: rgba(96, 95, 95, 0.941);
+  display: flex;
   border-top: 0.5px solid gray;
   position: fixed;
   bottom: 0;

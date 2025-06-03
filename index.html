@@ -17,19 +17,19 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <title>Movie App</title>
-    <style role="stylesheet" href="css/style.css"></style>
+    <link rel="stylesheet" href="css/style.css" />
     <script defer src="js/script.js"></script>
   </head>
   <body>
     <header>
-      <nav class="flex">
-        <ul>
+      <nav>
+        <ul class="flex">
           <li><span class="hour"></span>:<span class="min"></span></li>
-        </ul>
-        <ul class="icons--container">
-          <li><i class="fa-solid fa-signal"></i></li>
-          <li><i class="fa-solid fa-wifi"></i></li>
-          <li><i class="fa-solid fa-battery-full"></i></li>
+          <ul class="icons--container">
+            <li><i class="fa-solid fa-signal"></i></li>
+            <li><i class="fa-solid fa-wifi"></i></li>
+            <li><i class="fa-solid fa-battery-full"></i></li>
+          </ul>
         </ul>
       </nav>
     </header>
@@ -300,7 +300,7 @@
       </section>
     </main>
     <footer>
-      <ul>
+      <ul class="footer--icons flex">
         <li><i class="fa-solid fa-house"></i></li>
         <li><i class="fa-solid fa-video"></i></li>
         <li><i class="fa-solid fa-arrow-down"></i></li>
