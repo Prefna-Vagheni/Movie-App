@@ -8,3 +8,11 @@
 html {
   font-size: 62.5%;
 }
+html,
+body {
+  /* height: 100%; */
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: #555;
+  color: whitesmoke;
+}
