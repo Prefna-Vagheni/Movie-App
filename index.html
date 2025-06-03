@@ -22,21 +22,26 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="flex">
         <ul>
-          <li><span class="hour"></span>:<span class="main"></span></li>
-          <ul>
-            <li><i class="fa-solid fa-signal"></i></li>
-            <li><i class="fa-solid fa-wifi"></i></li>
-            <li><i class="fa-solid fa-battery-full"></i></li>
-          </ul>
+          <li><span class="hour"></span>:<span class="min"></span></li>
+        </ul>
+        <ul class="icons--container">
+          <li><i class="fa-solid fa-signal"></i></li>
+          <li><i class="fa-solid fa-wifi"></i></li>
+          <li><i class="fa-solid fa-battery-full"></i></li>
         </ul>
       </nav>
     </header>
     <main>
       <section class="landing--page">
         <figure>
-          <img src="" alt="" />
+          <img
+            src="images/view-3d-cinema-elements.jpg"
+            alt=""
+            width="150"
+            height="150"
+          />
           <figcaption class="longin--caption">
             An image worthy to be on the landing page.
           </figcaption>
@@ -109,7 +114,7 @@
           <label for="name">Name</label>
           <input
             type="text"
-            id="name"
+            id="name--user"
             name="name"
             placeholder="Name"
             required
@@ -127,7 +132,7 @@
           <label for="password">Password</label>
           <input
             type="password"
-            id="password"
+            id="password--user"
             name="password"
             placeholder="Strong password"
             required

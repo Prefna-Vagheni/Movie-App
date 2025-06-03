@@ -27,6 +27,7 @@ body {
 }
 main {
   padding-bottom: 3rem;
+  background-color: red;
 }
 header {
   padding-bottom: 3rem;
@@ -46,7 +47,7 @@ img {
   display: block;
   border-radius: 8px;
 }
-li {
+ul {
   list-style-type: none;
 }
 a {
@@ -55,4 +56,13 @@ a {
 }
 i {
   color: whitesmoke;
+}
+nav {
+  display: flex;
+}
+.icons--container {
+  display: flex;
+}
+.flex {
+  display: flex;
 }
