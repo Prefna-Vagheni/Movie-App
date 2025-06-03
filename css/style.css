@@ -96,3 +96,10 @@ nav {
 .grid-row--5 {
   grid-template-rows: repeat(5, 1fr);
 }
+
+fixed {
+  position: fixed;
+}
+absolute {
+  position: absolute;
+}
