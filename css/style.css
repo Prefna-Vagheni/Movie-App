@@ -50,6 +50,9 @@ img {
 ul {
   list-style-type: none;
 }
+li {
+  list-style: none;
+}
 a {
   color: inherit;
   cursor: pointer;
