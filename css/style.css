@@ -67,7 +67,7 @@ i {
 nav {
   display: flex;
 }
-.landing-page {
+.landing--page {
   width: 100%;
   position: relative;
   background-image: url('../images/view-3d-cinema-elements.jpg');
@@ -75,6 +75,8 @@ nav {
   background-position: center;
   height: 500px; /* or any height */
   overflow: hidden;
+  color: whitesmoke;
+  opacity: 0.7;
 }
 .landing-page::after {
   content: '';
@@ -87,6 +89,9 @@ nav {
   filter: blur(10px);
   transform: translateY(50%);
   z-index: 1;
+}
+.opacity--1 {
+  opacity: 1;
 }
 .self--align {
   justify-content: end;
