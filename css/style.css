@@ -17,7 +17,7 @@ body {
   background-color: #555;
 }
 body {
-  background-color: rgb(202, 177, 177);
+  background-color: rgb(15, 15, 15);
   width: 250px;
   margin: 1rem auto;
   height: 100%;
@@ -81,21 +81,24 @@ nav {
   background-image: url('../images/view-3d-cinema-elements.jpg');
   background-size: cover;
   background-position: center;
-  height: 500px;
-  mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+  position: relative;
+  height: 100vh;
+  mask-image: linear-gradient(to bottom, black 20%, transparent 80%);
+  -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 80%);
 }
-/* .landing--article {
+.landing--article {
   position: absolute;
   bottom: 0;
-  height: 100px;
+  z-index: 2;
+  height: 50vh;
+  /* height: 100px;
   width: 100%;
   background-image: url('../images/view-3d-cinema-elements.jpg');
   background-size: cover;
   background-position: center bottom;
   filter: blur(3px);
-  z-index: 1;
-} */
+  z-index: 1; */
+}
 .opacity--1 {
   opacity: 1;
 }
