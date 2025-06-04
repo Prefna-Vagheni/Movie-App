@@ -65,8 +65,16 @@ i {
 nav {
   display: flex;
 }
+.landing-page {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../images/view-3d-cinema-elements.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat-y;
+}
 .self--align {
-  align-self: self-end;
+  align-self: flex-end;
 }
 .absolute {
   position: absolute;
