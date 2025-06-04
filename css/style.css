@@ -79,11 +79,28 @@ nav {
   mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
 }
+.btn {
+  display: block;
+  width: 90%;
+  border: 1px solid white;
+  margin: 0.5rem auto;
+  border-radius: 4rem;
+  padding: 0.5rem;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.btn--create__acount {
+  background-image: linear-gradient(to left, rgb(66, 66, 177), rgb(42, 30, 87));
+  /* border: 1px solid linear-gradient(to left, rgb(66, 66, 177), rgb(42, 30, 87)); */
+  border: none;
+  padding: calc(0.5rem + 2px);
+}
 .landing--article {
-  position: absolute;
-  bottom: 0;
-  z-index: 2;
-  height: 45vh;
+  /* position: absolute;
+  bottom: 0; */
+  z-index: 9999;
+  height: 50vh;
 }
 .bold {
   font-weight: bolder;
