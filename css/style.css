@@ -68,18 +68,24 @@ nav {
   display: flex;
 }
 .landing--page {
-  width: 100%;
+  /* width: 100%;
   position: relative;
   background-image: url('../images/view-3d-cinema-elements.jpg');
   background-size: cover;
   background-position: center;
-  height: 500px; /* or any height */
+  height: 500px; 
   overflow: hidden;
   color: whitesmoke;
   opacity: 0.7;
-  position: relative;
+  position: relative; */
+  background-image: url('../images/view-3d-cinema-elements.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
 }
-.landing--article {
+/* .landing--article {
   position: absolute;
   bottom: 0;
   height: 100px;
@@ -89,7 +95,7 @@ nav {
   background-position: center bottom;
   filter: blur(3px);
   z-index: 1;
-}
+} */
 .opacity--1 {
   opacity: 1;
 }
