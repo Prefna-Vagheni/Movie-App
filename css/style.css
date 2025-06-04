@@ -20,26 +20,28 @@ body {
   background-color: rgb(202, 177, 177);
   width: 250px;
   margin: 1rem auto;
-  padding: 1rem;
   height: 100%;
   position: relative;
   border-radius: 0.5rem;
 }
 main {
+  padding: 1rem;
   padding-bottom: 3rem;
 }
 header {
+  padding: 1rem;
   padding-bottom: 3rem;
   width: 100%;
 }
 footer {
+  padding: 1rem;
   height: 3rem;
   background-color: rgba(96, 95, 95, 0.941);
   display: flex;
   border-top: 0.5px solid gray;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: inherit;
   z-index: 9999;
 }
 img {
@@ -71,10 +73,10 @@ nav {
   background-image: url('../images/view-3d-cinema-elements.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
 }
 .self--align {
-  align-self: flex-end;
+  justify-content: end;
 }
 .absolute {
   position: absolute;
