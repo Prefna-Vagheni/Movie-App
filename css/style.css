@@ -13,17 +13,17 @@ body {
   /* height: 100%; */
   font-family: sans-serif;
   line-height: 1.5;
-  background-color: #555;
   color: whitesmoke;
+  background-color: #555;
 }
 body {
+  background-color: rgb(202, 177, 177);
   max-width: 350px;
-  margin: 0 auto;
-  background-image: url('../images/bg-img.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: repeat-y;
+  margin: 1rem auto;
+  padding: 1rem;
+  height: 100%;
   position: relative;
+  border-radius: 0.5rem;
 }
 main {
   padding-bottom: 3rem;
@@ -49,6 +49,7 @@ img {
 }
 ul {
   list-style-type: none;
+  width: 100%;
 }
 li {
   list-style: none;
@@ -72,13 +73,16 @@ nav {
 .flex-col {
   flex-direction: column;
 }
+.align-center {
+  align-items: center;
+}
 .justify-between {
   justify-content: space-between;
 }
 .justify-around {
   justify-content: space-around;
 }
-.justidy-evenly {
+.justify-evenly {
   justify-content: space-evenly;
 }
 .grid {
