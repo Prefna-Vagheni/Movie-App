@@ -64,9 +64,24 @@ a {
 }
 i {
   color: whitesmoke;
+  /* font-weight: 100; */
+  background-color: transparent;
 }
 nav {
   display: flex;
+}
+.opacity--low {
+  opacity: 0.8;
+}
+.transparent {
+  background-color: transparent;
+}
+.top {
+  margin-top: 2rem;
+}
+.top--half {
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
 }
 .landing--page {
   background-image: url('../images/view-3d-cinema-elements.jpg');
@@ -98,6 +113,14 @@ nav {
   background-color: black;
   color: white;
   cursor: pointer;
+}
+.login--btn {
+  background-color: rgb(59, 56, 56);
+  padding: 0.7rem;
+  border: 1px solid rgb(67, 67, 67);
+  width: 50%;
+  border-radius: 1rem;
+  font-size: 0.8rem;
 }
 .btn--create__acount {
   background-image: linear-gradient(to left, rgb(66, 66, 177), rgb(42, 30, 87));
