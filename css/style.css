@@ -18,7 +18,7 @@ body {
 }
 body {
   background-color: rgb(202, 177, 177);
-  max-width: 350px;
+  width: 250px;
   margin: 1rem auto;
   padding: 1rem;
   height: 100%;
@@ -30,6 +30,7 @@ main {
 }
 header {
   padding-bottom: 3rem;
+  width: 100%;
 }
 footer {
   height: 3rem;
@@ -64,11 +65,21 @@ i {
 nav {
   display: flex;
 }
+.self--align {
+  align-self: self-end;
+}
+.absolute {
+  position: absolute;
+  top: 1rem;
+}
 .icons--container {
   display: flex;
 }
 .flex {
   display: flex;
+}
+.gap {
+  gap: 0.5rem;
 }
 .flex-col {
   flex-direction: column;

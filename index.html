@@ -21,17 +21,15 @@
     <script defer src="js/script.js"></script>
   </head>
   <body>
-    <header>
-      <nav class="flex justify-between align-center">
-        <ul>
-          <li><span class="hour"></span>:<span class="min"></span></li>
-        </ul>
-        <ul class="icons--container flex">
-          <li><i class="fa-solid fa-signal"></i></li>
-          <li><i class="fa-solid fa-wifi"></i></li>
-          <li><i class="fa-solid fa-battery-full"></i></li>
-        </ul>
-      </nav>
+    <header class="absolute absolute flex justify-between align-center">
+      <ul>
+        <li><span class="hour"></span>:<span class="min"></span></li>
+      </ul>
+      <ul class="icons--container flex gap self--align">
+        <li><i class="fa-solid fa-signal"></i></li>
+        <li><i class="fa-solid fa-wifi"></i></li>
+        <li><i class="fa-solid fa-battery-full"></i></li>
+      </ul>
     </header>
     <main>
       <section class="landing--page">
@@ -39,8 +37,8 @@
           <img
             src="images/view-3d-cinema-elements.jpg"
             alt=""
-            width="150"
-            height="150"
+            width="350"
+            height="350"
           />
           <figcaption class="longin--caption">
             An image worthy to be on the landing page.
