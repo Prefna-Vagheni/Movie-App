@@ -204,11 +204,21 @@ input {
   transform: translate(-50%, -60%);
   opacity: 0.5;
 }
-.movies--continue {
+.movies--continue,
+.trending--header {
   color: rgba(183, 237, 248, 0.648);
 }
-.movie--card {
+.movie--card,
+.trending--article {
   width: 11rem;
+}
+.journal {
+  width: 11rem;
+  height: 15rem;
+  background-image: url(../images/couple-watching-streaming-service-together-home.jpg);
+  background-size: cover;
+  background-position: right;
+  border-radius: 0.3em;
 }
 .movie--progress {
   width: 100%;
@@ -217,10 +227,12 @@ input {
   margin: 0.4rem auto;
   border-radius: 0.2rem;
 }
-.movie--title {
+.movie--title,
+.trending--title {
   color: rgba(192, 228, 236, 0.648);
 }
-.movie--track {
+.movie--track,
+.trending--description {
   font-size: 0.7rem;
 }
 .block {
