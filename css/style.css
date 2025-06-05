@@ -116,11 +116,15 @@ input {
   left: 0;
   z-index: 9999;
 }
-.form--input {
+.form--input,
+.search--movie {
   background-color: rgb(26, 23, 23);
   border: none;
   outline: none;
   border-radius: 1rem;
+}
+.search--movie::placeholder {
+  padding-left: 1rem;
 }
 .form--input::placeholder {
   color: whitesmoke;
@@ -191,6 +195,33 @@ input {
   right: 0.1rem;
   transform: translate(-50%, -60%);
   /* padding: 1rem; */
+}
+.center--left {
+  position: absolute;
+  border-radius: 0.4px;
+  top: 50%;
+  left: 1rem;
+  transform: translate(-50%, -60%);
+  opacity: 0.5;
+}
+.movies--continue {
+  color: rgba(183, 237, 248, 0.648);
+}
+.movie--card {
+  width: 11rem;
+}
+.movie--progress {
+  width: 100%;
+  height: 0.3rem;
+  background-color: red;
+  margin: 0.4rem auto;
+  border-radius: 0.2rem;
+}
+.movie--title {
+  color: rgba(192, 228, 236, 0.648);
+}
+.movie--track {
+  font-size: 0.7rem;
 }
 .block {
   display: block;
