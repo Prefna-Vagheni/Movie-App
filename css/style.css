@@ -105,6 +105,9 @@ input {
   mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
 }
+.hidden {
+  display: none;
+}
 .main-absolute {
   position: absolute;
   width: 100%;
@@ -112,6 +115,21 @@ input {
   top: 0;
   left: 0;
   z-index: 9999;
+}
+.form--input {
+  background-color: rgb(26, 23, 23);
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+}
+.form--input::placeholder {
+  color: whitesmoke;
+  opacity: 0.7;
+  /* outline: 0.5px solid lightblue; */
+}
+.form--input:focus {
+  border-color: rgb(54, 107, 223);
+  box-shadow: 0 0 8px rgba(54, 107, 223, 0.3);
 }
 .btn {
   display: block;
@@ -124,7 +142,12 @@ input {
   color: white;
   cursor: pointer;
 }
-.login--btn {
+.login {
+  width: 100%;
+  height: 100vh;
+}
+.login--btn,
+.sign--up--btn {
   background-color: rgb(59, 56, 56);
   padding: 0.7rem;
   border: 1px solid rgb(67, 67, 67);
@@ -165,7 +188,7 @@ input {
   position: absolute;
   top: 50%;
   right: 0.1rem;
-  transform: translateY(-50%);
+  transform: translate(-50%, -60%);
   /* padding: 1rem; */
 }
 .block {
@@ -174,7 +197,7 @@ input {
 .width--full {
   width: 100%;
   height: 100%;
-  padding-right: 2rem;
+  padding: 0.7rem;
 }
 .checked {
   color: gray;

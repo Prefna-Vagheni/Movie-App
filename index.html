@@ -85,10 +85,12 @@
               id="name"
               name="name"
               placeholder="Name"
-              class="width--full"
+              class="form--input width--full"
               required
             />
-            <i class="fa-solid fa-square-check checked absolute--center"></i>
+            <i
+              class="fa-solid fa-square-check checked absolute--center hidden"
+            ></i>
           </article>
 
           <label for="password">Password</label>
@@ -98,15 +100,19 @@
               id="password"
               name="password"
               placeholder="Strong password"
-              class="width--full"
+              class="form--input width--full"
               required
             />
-            <i class="fa-solid fa-square-check checked absolute--center"></i>
+            <i
+              class="fa-solid fa-square-check checked absolute--center hidden"
+            ></i>
           </article>
 
           <button class="btn btn--sign__in" type="submit">Sign in</button>
 
-          <p>Don't have an accout? <a href="#">Sign up</a></p>
+          <p class="opacity--low">
+            Don't have an accout? <a href="#" class="opacity--1">Sign up</a>
+          </p>
         </form>
       </section>
 
@@ -114,10 +120,10 @@
         <h2 class="login--header">
           <i class="fa-solid fa-arrow-left"></i> Sign Up
         </h2>
-        <p class="login--paragraph">
+        <p class="login--paragraph opacity--low top">
           Sign up with one of the following options
         </p>
-        <article class="login--options">
+        <article class="login--options flex gap top--half">
           <button class="sign--up--btn btn--apple">
             <i class="fa-brands fa-apple"></i>
           </button>
