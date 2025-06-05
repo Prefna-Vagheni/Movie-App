@@ -156,7 +156,8 @@ input {
   font-size: 0.8rem;
 }
 .btn--create__acount,
-.btn--sign__in {
+.btn--sign__in,
+.btn--sign__up {
   background-image: linear-gradient(to left, rgb(66, 66, 177), rgb(42, 30, 87));
   border: none;
   padding: calc(0.5rem + 1px);
