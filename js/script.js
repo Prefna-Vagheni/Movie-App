@@ -93,4 +93,24 @@ fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API}`)
 
 fetch(`https://www.omdbapi.com/?t=Inception&apikey=${API_KEY}`)
   .then((res) => res.json())
-  .then((data) => console.log(data));
+  .then((data) => {
+    console.log(data);
+    const htm = `
+            <article class="movie--card">
+                <figure class="movie--img">
+                  <img
+                    width="110px"
+                    height="40px"
+                    src="${data.Poster}"
+                    alt="People relaxing together"
+                  />
+                </figure>
+                <p class="movie--progress"></p>
+                <h4 class="movie--title">The big bang theory</h4>
+                <p class="movie--track opacity--low">Season One - Episode 01</p>
+            </article>
+        `;
+    document
+      .querySelector('.currently--watching')
+      .insertAdjacentHTML('beforeend', htm);
+  });
