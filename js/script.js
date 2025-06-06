@@ -19,6 +19,8 @@ fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API}`)
   .then((data) => {
     const moviesArray = data.results;
     const releaseDate = moviesArray[0].release_date.slice(0, 4);
+    document.querySelector('.details--title').textContent =
+      moviesArray[0].title;
     console.log(releaseDate);
     moviesArray.forEach((el) => {
       const html = `

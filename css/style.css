@@ -94,7 +94,9 @@ input {
   margin-bottom: 0.6rem;
 }
 .list--container {
-  overflow-y: scroll;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  /* scrollbar-width: none; */
 }
 .landing--page {
   background-image: url('../images/view-3d-cinema-elements.jpg');
@@ -226,6 +228,7 @@ input {
 .journal img {
   width: 10rem;
   height: 14rem;
+  border-radius: 1px;
 }
 .movie--progress {
   width: 100%;
