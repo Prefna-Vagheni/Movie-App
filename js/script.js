@@ -25,6 +25,7 @@ fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API}`)
       `${moviesArray[0].vote_average}`.slice(0, 3);
     document.querySelector('.storyline--paragraph').textContent =
       moviesArray[0].overview;
+    document.querySelector('.numbers').textContent = moviesArray[0].vote_count;
     console.log(releaseDate);
     moviesArray.forEach((el) => {
       const html = `
