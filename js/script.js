@@ -10,6 +10,10 @@ const moviesContainer = document.querySelector('.list--container');
 document.querySelector('.hour').textContent = hour;
 document.querySelector('.min').textContent = min;
 
+const updateUI = function (name, value) {
+  document.querySelector(`.${name}`).textContent = value;
+};
+
 fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API}`)
   .then((res) => {
     if (!res.ok) throw new Error('jfdjs');
@@ -19,13 +23,12 @@ fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API}`)
   .then((data) => {
     const moviesArray = data.results;
     const releaseDate = moviesArray[0].release_date.slice(0, 4);
-    document.querySelector('.details--title').textContent =
-      moviesArray[0].title;
-    document.querySelector('.rate--movie').textContent =
-      `${moviesArray[0].vote_average}`.slice(0, 3);
-    document.querySelector('.storyline--paragraph').textContent =
-      moviesArray[0].overview;
-    document.querySelector('.numbers').textContent = moviesArray[0].vote_count;
+
+    updateUI('details--title', moviesArray[2].title);
+    updateUI('rate--movie', `${moviesArray[0].vote_average}`.slice(0, 3));
+    updateUI('storyline--paragraph', moviesArray[0].overview);
+    updateUI('numbers', moviesArray[0].vote_count);
+
     console.log(releaseDate);
     moviesArray.forEach((el) => {
       const html = `
