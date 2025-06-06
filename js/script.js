@@ -23,6 +23,7 @@ fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API}`)
     moviesArray.forEach((el) => {
       const html = `
             <article class="trending--article">
+              
               <article class="journal"></article>
               <h4 class="trending--title">${el.original_title}</h4>
               <p class="trending--description opacity--low">
