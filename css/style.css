@@ -93,7 +93,8 @@ input {
   margin-top: 0.6rem;
   margin-bottom: 0.6rem;
 }
-.list--container {
+.list--container,
+.currently--watching {
   overflow-x: scroll;
   overflow-y: hidden;
   /* scrollbar-width: none; */

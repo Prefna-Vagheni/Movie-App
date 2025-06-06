@@ -58,3 +58,39 @@ fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API}`)
     console.log(moviesArray);
   })
   .catch((err) => console.error(err.message));
+
+// for (let num = 1; num <= 20; num++) {
+//   fetch(
+//     `https://api.themoviedb.org/3/movie/${num}?api_key=${API}&append_to_response=videos,credits`
+//   )
+//     .then((res) => {
+//       if (res.ok) return res.json();
+//     })
+//     .then((data) => {
+//       console.log(data);
+//       console.log(data.poster_path.slice(1));
+//       const htm = `
+//             <article class="movie--card">
+//                 <figure class="movie--img">
+//                   <img
+//                     width="110px"
+//                     height="40px"
+//                     src="images/young-people-relaxing-together.jpg"
+//                     alt="People relaxing together"
+//                   />
+//                 </figure>
+//                 <p class="movie--progress"></p>
+//                 <h4 class="movie--title">The big bang theory</h4>
+//                 <p class="movie--track opacity--low">Season One - Episode 01</p>
+//             </article>
+//         `;
+//       document
+//         .querySelector('.currently--watching')
+//         .insertAdjacentHTML('beforeend', htm);
+//     })
+//     .catch((err) => console.error(err));
+// }
+
+fetch(`https://www.omdbapi.com/?t=Inception&apikey=${API_KEY}`)
+  .then((res) => res.json())
+  .then((data) => console.log(data));
