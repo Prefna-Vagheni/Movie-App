@@ -17,7 +17,6 @@ const updateUI = function (name, value) {
 fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API}`)
   .then((res) => {
     if (!res.ok) throw new Error('jfdjs');
-    console.log(res);
     return res.json();
   })
   .then((data) => {
@@ -29,7 +28,6 @@ fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API}`)
     updateUI('storyline--paragraph', moviesArray[0].overview);
     updateUI('numbers', moviesArray[0].vote_count);
 
-    console.log(releaseDate);
     moviesArray.forEach((el) => {
       const html = `
             <article class="trending--article">
@@ -55,7 +53,6 @@ fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API}`)
             `;
       moviesContainer.insertAdjacentHTML('beforeend', html);
     });
-    console.log(moviesArray);
   })
   .catch((err) => console.error(err.message));
 
