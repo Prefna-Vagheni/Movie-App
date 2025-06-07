@@ -91,10 +91,10 @@ fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API}`)
 fetch(`https://api.tvmaze.com/seasons/1/episodes`)
   .then((res) => res.json())
   .then((data) => {
+    console.log(data);
     data.forEach((el, i) => {
       const { name, season, number } = el;
       const { medium } = el.image;
-      console.log(medium);
 
       const htm = `
         <article class="movie--card">
@@ -148,3 +148,11 @@ fetch(`https://api.tvmaze.com/shows/1/cast`)
         .insertAdjacentHTML('beforeend', appendHTML);
     });
   });
+
+// fetch(`https://www.omdbapi.com/?t=Inception&apikey=${API}`)
+//   .then((res) => res.json())
+//   .then((data) => console.log(data));
+
+fetch(`https://api.tvmaze.com/shows/1/images`)
+  .then((res) => res.json())
+  .then((data) => console.log(data));
