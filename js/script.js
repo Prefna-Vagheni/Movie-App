@@ -97,29 +97,25 @@ fetch(`https://api.tvmaze.com/seasons/1/episodes`)
       console.log(medium);
 
       const htm = `
-                <article class="movie--card">
-                    <figure class="movie--img">
-                      <img
-                        width="110px"
-                        height="40px"
-                        src="${medium}"
-                        alt="People relaxing together"
-                      />
-                    </figure>
-                    <p class="movie--progress"></p>
-                    <h4 class="movie--title">${name}</h4>
-                    <p class="movie--track opacity--low">Season ${season} - Episode ${number}</p>
-                </article>
+        <article class="movie--card">
+            <figure class="movie--img">
+              <img
+                width="110px"
+                height="40px"
+                src="${medium}"
+                alt="People relaxing together"
+              />
+            </figure>
+            <p class="movie--progress"></p>
+            <h4 class="movie--title">${name}</h4>
+            <p class="movie--track opacity--low">Season ${season} - Episode ${number}</p>
+        </article>
             `;
       document
         .querySelector('.currently--watching')
         .insertAdjacentHTML('beforeend', htm);
     });
   });
-
-// fetch(`https://api.tvmaze.com/seasons/1/episodes`)
-//   .then((res) => res.json())
-//   .then((data) => console.log(data));
 
 //   Show cast
 fetch(`https://api.tvmaze.com/shows/1/cast`)
@@ -132,20 +128,20 @@ fetch(`https://api.tvmaze.com/shows/1/cast`)
 
       const { character } = el;
       const appendHTML = `
-              <article class="caracter">
-                        <figure>
-                          <img
-                            src="${character.image.medium}"
-                            width="55"
-                            height="55"
-                            class="caracter--img"
-                            alt=""
-                          />
-                          <figcaption class="caracter--name opacity--low">
-                            ${character.name}
-                          </figcaption>
-                        </figure>
-                      </article>
+        <article class="caracter">
+            <figure>
+              <img
+                src="${character.image.medium}"
+                width="55"
+                height="55"
+                class="caracter--img"
+                alt=""
+              />
+              <figcaption class="caracter--name opacity--low">
+                ${character.name}
+              </figcaption>
+            </figure>
+        </article>
               `;
       document
         .querySelector('.actors')
