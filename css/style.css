@@ -287,6 +287,11 @@ input {
 .grid {
   display: grid;
 }
+.grid--row--1 {
+  grid-template-rows: 1fr;
+  width: 100%;
+  overflow: hidden;
+}
 .grid-col--2 {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -353,6 +358,12 @@ input {
   background-color: black;
   border: 0.7px solid rgb(34, 33, 33);
   padding: 1.2rem;
+}
+.actors {
+  width: 100%;
+}
+.caracter {
+  width: 100%;
 }
 .caracter--img {
   width: 5.5rem;

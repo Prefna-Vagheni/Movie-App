@@ -88,7 +88,7 @@ fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API}`)
 //     .catch((err) => console.error(err));
 // }
 
-fetch(`https://www.omdbapi.com/?t=Inception&apikey=${API_KEY}`)
+fetch(`https://api.tvmaze.com/search/shows?q=breaking+bad`)
   .then((res) => res.json())
   .then((data) => {
     console.log(data);
@@ -98,7 +98,6 @@ fetch(`https://www.omdbapi.com/?t=Inception&apikey=${API_KEY}`)
                   <img
                     width="110px"
                     height="40px"
-                    src="${data.Poster}"
                     alt="People relaxing together"
                   />
                 </figure>
@@ -110,4 +109,37 @@ fetch(`https://www.omdbapi.com/?t=Inception&apikey=${API_KEY}`)
     document
       .querySelector('.currently--watching')
       .insertAdjacentHTML('beforeend', htm);
+  });
+
+//   Show cast
+fetch(`https://api.tvmaze.com/shows/1/cast`)
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
+
+    data.forEach((el, i) => {
+      if (i > 3) return;
+
+      const { character } = el;
+      console.log(character);
+      const appendHTML = `
+              <article class="caracter">
+                        <figure>
+                          <img
+                            src="${character.image.medium}"
+                            width="55"
+                            height="55"
+                            class="caracter--img"
+                            alt=""
+                          />
+                          <figcaption class="caracter--name opacity--low">
+                            ${character.name}
+                          </figcaption>
+                        </figure>
+                      </article>
+              `;
+      document
+        .querySelector('.actors')
+        .insertAdjacentHTML('beforeend', appendHTML);
+    });
   });
