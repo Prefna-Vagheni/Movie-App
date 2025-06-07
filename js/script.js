@@ -14,45 +14,45 @@ const updateUI = function (name, value) {
   document.querySelector(`.${name}`).textContent = value;
 };
 
-fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API}`)
+fetch(`https://www.omdbapi.com/?t=Inception&apikey=${API_KEY}`)
+  // fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API}`)
   .then((res) => {
     if (!res.ok) throw new Error('jfdjs');
     return res.json();
   })
   .then((data) => {
-    const moviesArray = data.results;
-    const releaseDate = moviesArray[0].release_date.slice(0, 4);
-
-    updateUI('details--title', moviesArray[2].title);
-    updateUI('rate--movie', `${moviesArray[0].vote_average}`.slice(0, 3));
-    updateUI('storyline--paragraph', moviesArray[0].overview);
-    updateUI('numbers', moviesArray[0].vote_count);
-
-    moviesArray.forEach((el) => {
-      const html = `
-            <article class="trending--article">
-              
-               <article class="journal">
-                <figure>
-                  <img
-                    src="images/couple-watching-streaming-service-together-home.jpg"
-                    alt="A couple of people"
-                  />
-                </figure>
-              </article>
-              <h4 class="trending--title">${el.original_title}</h4>
-              <p class="trending--description opacity--low">
-                <span class="prod--year">${el.release_date.slice(
-                  0,
-                  4
-                )}</span>&nbsp;
-                <span class="type">Drama</span> &nbsp;
-                <span class="movie--duration">1h 30m</span>
-              </p>
-            </article>
-            `;
-      moviesContainer.insertAdjacentHTML('beforeend', html);
-    });
+    console.log(data);
+    updateUI('details--title', data.Title);
+    updateUI('rate--movie', data.imdbRating);
+    updateUI('storyline--paragraph', data.Plot);
+    updateUI('numbers', data.imdbVotes.slice(0, 5));
+    updateUI('production--brand', data.Production);
+    // const moviesArray = data.results;
+    // const releaseDate = moviesArray[0].release_date.slice(0, 4);
+    // moviesArray.forEach((el) => {
+    //   const html = `
+    //         <article class="trending--article">
+    //            <article class="journal">
+    //             <figure>
+    //               <img
+    //                 src="images/couple-watching-streaming-service-together-home.jpg"
+    //                 alt="A couple of people"
+    //               />
+    //             </figure>
+    //           </article>
+    //           <h4 class="trending--title">${el.original_title}</h4>
+    //           <p class="trending--description opacity--low">
+    //             <span class="prod--year">${el.release_date.slice(
+    //               0,
+    //               4
+    //             )}</span>&nbsp;
+    //             <span class="type">Drama</span> &nbsp;
+    //             <span class="movie--duration">1h 30m</span>
+    //           </p>
+    //         </article>
+    //         `;
+    //   moviesContainer.insertAdjacentHTML('beforeend', html);
+    // });
   })
   .catch((err) => console.error(err.message));
 
@@ -154,5 +154,8 @@ fetch(`https://api.tvmaze.com/shows/1/cast`)
 //   .then((data) => console.log(data));
 
 fetch(`https://api.tvmaze.com/shows/1/images`)
+  .then((res) => res.json())
+  .then((data) => console.log(data));
+fetch(`https://www.omdbapi.com/?t=Inception&apikey=${API_KEY}`)
   .then((res) => res.json())
   .then((data) => console.log(data));
