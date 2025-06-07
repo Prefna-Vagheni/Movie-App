@@ -165,8 +165,11 @@ fetch(`https://api.tvmaze.com/shows/1/cast`)
 fetch(`https://api.tvmaze.com/shows/1/images`)
   .then((res) => res.json())
   .then((data) => console.log(data));
+
 fetch(`https://www.omdbapi.com/?t=Inception&apikey=${API_KEY}`)
   .then((res) => res.json())
   .then((data) => console.log(data));
 
-console.log(148 % 60);
+fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API}`)
+  .then((res) => res.json())
+  .then((data) => console.log(data));
