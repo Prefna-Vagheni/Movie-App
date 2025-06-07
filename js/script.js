@@ -88,28 +88,38 @@ fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API}`)
 //     .catch((err) => console.error(err));
 // }
 
-fetch(`https://api.tvmaze.com/search/shows?q=breaking+bad`)
+fetch(`https://api.tvmaze.com/seasons/1/episodes`)
   .then((res) => res.json())
   .then((data) => {
-    console.log(data);
-    const htm = `
-            <article class="movie--card">
-                <figure class="movie--img">
-                  <img
-                    width="110px"
-                    height="40px"
-                    alt="People relaxing together"
-                  />
-                </figure>
-                <p class="movie--progress"></p>
-                <h4 class="movie--title">The big bang theory</h4>
-                <p class="movie--track opacity--low">Season One - Episode 01</p>
-            </article>
-        `;
-    document
-      .querySelector('.currently--watching')
-      .insertAdjacentHTML('beforeend', htm);
+    data.forEach((el, i) => {
+      const { name, season, number } = el;
+      const { medium } = el.image;
+      console.log(medium);
+
+      const htm = `
+                <article class="movie--card">
+                    <figure class="movie--img">
+                      <img
+                        width="110px"
+                        height="40px"
+                        src="${medium}"
+                        alt="People relaxing together"
+                      />
+                    </figure>
+                    <p class="movie--progress"></p>
+                    <h4 class="movie--title">${name}</h4>
+                    <p class="movie--track opacity--low">Season ${season} - Episode ${number}</p>
+                </article>
+            `;
+      document
+        .querySelector('.currently--watching')
+        .insertAdjacentHTML('beforeend', htm);
+    });
   });
+
+// fetch(`https://api.tvmaze.com/seasons/1/episodes`)
+//   .then((res) => res.json())
+//   .then((data) => console.log(data));
 
 //   Show cast
 fetch(`https://api.tvmaze.com/shows/1/cast`)
@@ -121,7 +131,6 @@ fetch(`https://api.tvmaze.com/shows/1/cast`)
       if (i > 3) return;
 
       const { character } = el;
-      console.log(character);
       const appendHTML = `
               <article class="caracter">
                         <figure>

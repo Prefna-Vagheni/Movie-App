@@ -93,12 +93,17 @@ input {
   margin-top: 0.6rem;
   margin-bottom: 0.6rem;
 }
+.no-wrap {
+  width: 100%;
+  flex-wrap: nowrap;
+}
 .list--container,
 .currently--watching {
   overflow-x: scroll;
   overflow-y: hidden;
   /* scrollbar-width: none; */
 }
+
 .landing--page {
   background-image: url('../images/view-3d-cinema-elements.jpg');
   opacity: 0.7;
@@ -218,6 +223,10 @@ input {
 .trending--article {
   width: 11rem;
 }
+.movie--card {
+  flex: 1;
+  min-width: 25%;
+}
 .journal {
   width: 11rem;
   height: 15rem;
@@ -229,6 +238,9 @@ input {
 .journal img {
   width: 10rem;
   height: 14rem;
+  border-radius: 1px;
+}
+.movie--card img {
   border-radius: 1px;
 }
 .movie--progress {
