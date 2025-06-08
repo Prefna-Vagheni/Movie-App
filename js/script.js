@@ -158,6 +158,4 @@ fetch(`https://api.tvmaze.com/shows/1/cast`)
     });
   });
 
-fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API}`).then((res) =>
-  res.json()
-);
+fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API}`);
