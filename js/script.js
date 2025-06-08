@@ -158,10 +158,9 @@ fetch(`https://api.tvmaze.com/shows/1/cast`)
     });
   });
 
-
 fetch(`https://api.tvmaze.com/shows/1/images`)
   .then((res) => res.json())
-  .then((data) => console.log(data));
+  .then((data) => console.log(data[0]));
 
 fetch(`https://www.omdbapi.com/?t=Inception&apikey=${API_KEY}`)
   .then((res) => res.json())
