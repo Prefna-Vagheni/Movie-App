@@ -157,5 +157,3 @@ fetch(`https://api.tvmaze.com/shows/1/cast`)
         .insertAdjacentHTML('beforeend', appendHTML);
     });
   });
-
-fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API}`);
