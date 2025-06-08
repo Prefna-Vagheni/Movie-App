@@ -158,7 +158,6 @@ fetch(`https://api.tvmaze.com/shows/1/cast`)
     });
   });
 
-fetch(`https://api.tvmaze.com/shows/1/images`)
   .then((res) => res.json())
   .then((data) => console.log(data[0]));
 
