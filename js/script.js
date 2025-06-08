@@ -158,9 +158,9 @@ fetch(`https://api.tvmaze.com/shows/1/cast`)
     });
   });
 
-fetch(`https://www.omdbapi.com/?t=Inception&apikey=${API_KEY}`)
-  .then((res) => res.json())
-  .then((data) => console.log(data));
+fetch(`https://www.omdbapi.com/?t=Inception&apikey=${API_KEY}`).then((res) =>
+  res.json()
+);
 
 fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API}`)
   .then((res) => res.json())
