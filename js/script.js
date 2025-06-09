@@ -157,3 +157,7 @@ fetch(`https://api.tvmaze.com/shows/1/cast`)
         .insertAdjacentHTML('beforeend', appendHTML);
     });
   });
+
+fetch(`http://www.omdbapi.com/?apikey=${API}`)
+  .then((res) => res.json())
+  .then((data) => console.log(data));
