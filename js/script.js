@@ -165,3 +165,5 @@ fetch(`http://www.omdbapi.com/?apikey=${API}`)
 fetch(`http://www.omdbapi.com/?apikey=${API}&`)
   .then((res) => res.json())
   .then((data) => console.log(data));
+
+console.log(`http://www.omdbapi.com/?apikey=${API}&t=Inception`);
