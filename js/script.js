@@ -165,3 +165,4 @@ fetch(`http://www.omdbapi.com/?apikey=${API}`)
 fetch(`http://www.omdbapi.com/?apikey=${API}&`)
   .then((res) => res.json())
   .then((data) => console.log(data));
+http://www.omdbapi.com/?apikey=065ea3430b1569ac8daa850e3fb0b1b8&
