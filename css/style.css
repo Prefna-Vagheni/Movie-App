@@ -5,6 +5,10 @@
   margin: 0;
   padding: 0;
 }
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
 html {
   font-size: 62.5%;
 }
@@ -131,7 +135,6 @@ input {
 .search--movie {
   background-color: rgb(26, 23, 23);
   border: none;
-  outline: none;
   border-radius: 1rem;
 }
 .search--movie::placeholder {
@@ -140,7 +143,6 @@ input {
 .form--input::placeholder {
   color: whitesmoke;
   opacity: 0.7;
-  /* outline: 0.5px solid lightblue; */
 }
 .form--input:focus {
   border-color: rgb(54, 107, 223);
@@ -356,8 +358,7 @@ input {
   font-weight: 900;
   width: fit-content;
 }
-.btns--container {
-}
+
 .movie--btn {
   color: whitesmoke;
   width: 50%;
